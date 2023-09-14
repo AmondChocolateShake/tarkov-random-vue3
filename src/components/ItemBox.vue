@@ -14,7 +14,8 @@ export default {
     name:'ItemBox',
     data() {
         return {
-            modName:"AK Kiba Arms VDM CS gas tube"
+            modName:"AK Kiba Arms VDM CS gas tube",
+            
         }
     },
 
