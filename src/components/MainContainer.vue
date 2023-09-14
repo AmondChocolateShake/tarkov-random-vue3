@@ -28,7 +28,7 @@ export default {
         height: 600px;
         background-color: #1e1e1e;
         border-radius: 15px;
-        border:4px solid rgba(255, 255, 255, 30%);
+        border:4px solid rgba(255, 255, 255, 80%);
     }
 
     #weapon{
@@ -37,7 +37,7 @@ export default {
         align-items: center;
         width: 100%;
         height: 200px;
-        border-bottom: 3px solid rgba(255,255,255,30%);
+        border-bottom: 3px solid rgba(255,255,255,80%);
     }
 
     #itemListBox{
@@ -46,6 +46,7 @@ export default {
         align-items: center;
 
         width: 100%;
+        height:400px;
         min-height: 400px;
     }
 

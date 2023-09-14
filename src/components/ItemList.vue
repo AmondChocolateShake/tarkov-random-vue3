@@ -1,11 +1,16 @@
 <template lang="">
     <div id="ItemList">
-        
+        <ItemBox/>
     </div>
 </template>
 <script>
+import ItemBox from './ItemBox.vue';
+
 export default {
-    name:"ItemList"
+    name:"ItemList",
+    components:{
+        ItemBox
+    }
 }
 </script>
 <style>

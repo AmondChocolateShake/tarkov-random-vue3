@@ -28,7 +28,7 @@ export default {
 
         width: 350px;
         height: 150px;
-        border:3px solid rgba(255,255,255,30%);
+        border:3px solid rgba(255,255,255,80%);
         border-radius: 15px;
     }
     .weapon_name{
@@ -41,7 +41,7 @@ export default {
     .imgBox{
         width:250px;
         height: 150px;
-        border-right: 3px solid rgba(255,255,255,30%);
+        border-right: 3px solid rgba(255,255,255,80%);
     }
 
     .inspectImg{
