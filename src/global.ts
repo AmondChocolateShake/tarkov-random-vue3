@@ -7,11 +7,17 @@ interface item{
     imgLink:string
 }
 
+class Weapon{
 
+
+}
+
+class Item{
+
+}
 
 class GlobalState{
-    
-
+    weapon:
 
 
 }
