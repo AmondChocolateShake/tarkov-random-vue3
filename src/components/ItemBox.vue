@@ -51,7 +51,10 @@ export default {
         align-items: center;
         width:100px;
         height:100px;
+        color: rgba(255, 255, 255, 80%);
     }
-
+    .itemImg > div{
+        height:20px
+    }
 
 </style>
