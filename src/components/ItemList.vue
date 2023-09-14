@@ -1,13 +1,18 @@
 <template lang="">
-    <div>
+    <div id="ItemList">
         
     </div>
 </template>
 <script>
 export default {
-    
+    name:"ItemList"
 }
 </script>
-<style lang="">
+<style>
+    #ItemList{
+        display: flex;
+        width: 90%;
+        height: 90%;
+    }
     
 </style>

@@ -1,20 +1,52 @@
 <template lang="">
     <div id="main">
-        
+        <div id="weapon">
+            <WeaponBox/>
+        </div>
+        <div id="itemListBox">
+            <ItemList/>
+        </div>
     </div>
 </template>
-<script>
-export default {
-    name:"MainContainer"
 
+<script>
+import WeaponBox from './WeaponBox.vue';
+import ItemList from './ItemList.vue';
+
+export default {
+    name:"MainContainer",
+    components:{
+        WeaponBox,
+        ItemList
+    }
 
 }
 </script>
 <style>
     #main{
-        width: 80%;
-        height: 80%;
-        background-color: #3a3a3a;
+        width: 500px;
+        height: 600px;
+        background-color: #1e1e1e;
         border-radius: 15px;
+        border:4px solid rgba(255, 255, 255, 30%);
     }
+
+    #weapon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        border-bottom: 3px solid rgba(255,255,255,30%);
+    }
+
+    #itemListBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        min-height: 400px;
+    }
+
 </style>
