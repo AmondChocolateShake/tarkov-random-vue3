@@ -1,9 +1,9 @@
 <template lang="">
-    <div id="main">
-        <div id="weapon">
+    <div class="main">
+        <div class="weapon">
             <WeaponBox/>
         </div>
-        <div id="itemListBox">
+        <div class="itemListBox">
             <ItemList/>
         </div>
     </div>
@@ -23,15 +23,15 @@ export default {
 }
 </script>
 <style>
-    #main{
+    .main{
         width: 500px;
         height: 600px;
         background-color: #1e1e1e;
         border-radius: 15px;
-        border:4px solid rgba(255, 255, 255, 80%);
+        border:2px solid rgba(255, 255, 255, 80%);
     }
 
-    #weapon{
+    .weapon{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,7 +40,7 @@ export default {
         border-bottom: 3px solid rgba(255,255,255,80%);
     }
 
-    #itemListBox{
+    .itemListBox{
         display: flex;
         justify-content: center;
         align-items: center;
