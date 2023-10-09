@@ -1,7 +1,7 @@
 <template lang="">
     <div id="weaponBox">
         <div class="imgBox">
-            <img class="inspectImg" src="https://assets.tarkov.dev/5841474424597759ba49be91-image.webp" alt="">
+            <img class="inspectImg" src={{imgLink}} alt="Picture of Gun">
         </div>
         <div class="weapon_name">
             <div>
@@ -13,11 +13,10 @@
 <script>
 export default {
     name:'WeaponBox',
-    data() {
-        return {
-            weaponName:"AK-74N"
-        }
-    },
+    props:{
+        weaponName:String,
+        imgLink:String
+    }
 }
 </script>
 <style>

@@ -4,16 +4,17 @@
             <WeaponBox/>
         </div>
         <div class="itemListBox">
-            <ItemList/>
+            <ItemList :modList="modList"/>
         </div>
     </div>
-    <GenBtn/>
+    <GenBtn @click="generateRandomData"/>
 </template>
 
 <script>
 import WeaponBox from './WeaponBox.vue';
 import ItemList from './ItemList.vue';
 import GenBtn from './GenBtn.vue';
+import { ref } from 'vue';
 
 export default {
     name:"MainContainer",
@@ -21,6 +22,35 @@ export default {
         WeaponBox,
         ItemList,
         GenBtn
+    },
+    setup(){
+
+        
+        let modList=ref([]);
+        const setModList=(data)=>{
+            modList.value=data;
+        }
+
+        async function generateRandomData(){
+            await fetch('http://localhost:3000/weapon/generate', {
+                method: "POST",
+                headers: {
+                    "Content-Type" : "application/json"
+                },
+                body:JSON.stringify({})
+            }).then( res => res.json() )
+            // setModList(res);
+        }
+
+        return(
+            generateRandomData(),
+            setModList(),
+            modList
+        )
+
+        
+        
+
     }
 
 }
