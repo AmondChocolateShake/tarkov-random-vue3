@@ -1,7 +1,7 @@
-<template lang="">
+<template>
     <div class="Mod">
         <div class="itemImg">
-            <img class="icon" src="https://assets.tarkov.dev/5a01ad4786f77450561fda02-8x.webp" alt="">
+            <img class="icon" src={{imgLink}} alt="">
             <!-- <div>scope</div> -->
         </div>
         <div class="name">
@@ -12,12 +12,10 @@
 <script>
 export default {
     name:'ItemBox',
-    data() {
-        return {
-            modName:"AK Kiba Arms VDM CS gas tube",
-            
-        }
-    },
+    props:{
+        modName:String,
+        imgLink:String,
+    }
 
 }
 </script>
@@ -29,9 +27,9 @@ export default {
 
 
         /* margin-top: 10px; */
-        border: 3px solid rgba(255, 255, 255, 80%);
+        border: 1px solid rgba(255, 255, 255, 80%);
         width:100%;
-        height:100px;
+        height:70px;
     }
 
     .icon{
@@ -50,8 +48,8 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width:100px;
-        height:100px;
+        width:70px;
+        height:100%;
         color: rgba(255, 255, 255, 80%);
     }
     .itemImg > div{

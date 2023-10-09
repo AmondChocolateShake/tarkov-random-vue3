@@ -1,6 +1,7 @@
-<template lang="">
+<template>
     <div class="ItemList">
         <ItemBox/>
+        
     </div>
 </template>
 <script>
