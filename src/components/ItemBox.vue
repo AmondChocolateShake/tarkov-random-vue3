@@ -2,7 +2,7 @@
     <div class="Mod">
         <div class="itemImg">
             <img class="icon" src="https://assets.tarkov.dev/5a01ad4786f77450561fda02-8x.webp" alt="">
-            <div>scope</div>
+            <!-- <div>scope</div> -->
         </div>
         <div class="name">
             <div>{{modName}}</div>

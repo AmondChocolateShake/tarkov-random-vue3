@@ -1,5 +1,5 @@
 <template lang="">
-    <div id="ItemList">
+    <div class="ItemList">
         <ItemBox/>
     </div>
 </template>
@@ -7,6 +7,9 @@
 import ItemBox from './ItemBox.vue';
 
 export default {
+    props:{
+        modList:Array
+    },
     name:"ItemList",
     components:{
         ItemBox
@@ -14,7 +17,7 @@ export default {
 }
 </script>
 <style>
-    #ItemList{
+    .ItemList{
         display: flex;
         width: 90%;
         height: 90%;
