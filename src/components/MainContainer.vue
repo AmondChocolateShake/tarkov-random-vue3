@@ -1,10 +1,10 @@
 <template lang="">
     <div class="main">
         <div class="weapon">
-            <WeaponBox/>
+            <WeaponBox :weaponName= "weaponData.name" :imgLink= "weaponData.imgLink"/>
         </div>
         <div class="itemListBox">
-            <ItemList :modList="modList"/>
+            <ItemList :modList= "weaponData.modSlots"/>
         </div>
     </div>
     <GenBtn @click="generateRandomData"/>
@@ -14,7 +14,7 @@
 import WeaponBox from './WeaponBox.vue';
 import ItemList from './ItemList.vue';
 import GenBtn from './GenBtn.vue';
-import { ref } from 'vue';
+import { onBeforeMount } from 'vue';
 
 export default {
     name:"MainContainer",
@@ -26,26 +26,28 @@ export default {
     setup(){
 
         
-        let modList=ref([]);
-        const setModList=(data)=>{
-            modList.value=data;
-        }
+        let weaponData;
+        
 
-        async function generateRandomData(){
-            await fetch('http://localhost:3000/weapon/generate', {
+        onBeforeMount(() => {
+            
+            fetch('http://localhost:3000/weapon/generate', {
                 method: "POST",
                 headers: {
                     "Content-Type" : "application/json"
                 },
                 body:JSON.stringify({})
             }).then( res => res.json() )
-            // setModList(res);
-        }
+            .then(data =>{
+                weaponData=data
+                console.log(weaponData);
+            });
+            
+        });
+
 
         return(
-            generateRandomData(),
-            setModList(),
-            modList
+            weaponData
         )
 
         

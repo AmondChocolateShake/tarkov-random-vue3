@@ -1,7 +1,6 @@
 <template>
     <div class="ItemList">
-        <ItemBox/>
-        
+        <ItemBox v-for="mod, index in modList" :key="index" :modName="mod.name" :imgLink="mod.imgLink" />
     </div>
 </template>
 <script>
