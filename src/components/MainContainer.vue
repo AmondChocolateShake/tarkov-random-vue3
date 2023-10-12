@@ -1,20 +1,20 @@
 <template lang="">
-    <div class="main">
+    <div class="main" v-if="flag">
         <div class="weapon">
-            <WeaponBox :weaponName= "weaponData.name" :imgLink= "weaponData.imgLink"/>
+            <WeaponBox :weaponName= "weaponData.value.name" :imgLink= "weaponData.value.imgLink"/>
         </div>
         <div class="itemListBox">
-            <ItemList :modList= "weaponData.modSlots"/>
+            <ItemList :modList= "weaponData.value.modSlots"/>
         </div>
     </div>
-    <GenBtn @click="generateRandomData"/>
+    <GenBtn @click= "generateRandomData"/>
 </template>
 
 <script>
 import WeaponBox from './WeaponBox.vue';
 import ItemList from './ItemList.vue';
 import GenBtn from './GenBtn.vue';
-import { onBeforeMount } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 
 export default {
     name:"MainContainer",
@@ -26,28 +26,32 @@ export default {
     setup(){
 
         
-        let weaponData;
-        
+        let weaponData=ref({});
+        let flag=ref(false);
 
         onBeforeMount(() => {
-            
-            fetch('http://localhost:3000/weapon/generate', {
-                method: "POST",
-                headers: {
-                    "Content-Type" : "application/json"
-                },
-                body:JSON.stringify({})
-            }).then( res => res.json() )
-            .then(data =>{
-                weaponData=data
-                console.log(weaponData);
-            });
+            generateRandomData();
             
         });
-
+        
+        function generateRandomData(){fetch('http://localhost:3000/weapon/generate', {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body:JSON.stringify({})
+        }).then( res => res.json() )
+        .then(data =>{
+            weaponData.value= data
+            flag.value= true;
+            console.log(weaponData.value);
+            console.log(flag.value);
+        });}
 
         return(
-            weaponData
+            weaponData,
+            generateRandomData,
+            flag
         )
 
         
