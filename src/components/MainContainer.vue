@@ -1,10 +1,10 @@
 <template lang="">
-    <div class="main" v-if="flag">
+    <div class="main" v-if="this.flag">
         <div class="weapon">
-            <WeaponBox :weaponName= "weaponData.value.name" :imgLink= "weaponData.value.imgLink"/>
+            <WeaponBox :weaponName="weaponData.name" :imgLink= "weaponData.imgLink"/>
         </div>
         <div class="itemListBox">
-            <ItemList :modList= "weaponData.value.modSlots"/>
+            <ItemList :modList= "weaponData.modSlots"/>
         </div>
     </div>
     <GenBtn @click= "generateRandomData"/>
@@ -26,8 +26,8 @@ export default {
     setup(){
 
         
-        let weaponData=ref({});
-        let flag=ref(false);
+        const weaponData=ref({});
+        const flag=ref(false);
 
         onBeforeMount(() => {
             generateRandomData();
