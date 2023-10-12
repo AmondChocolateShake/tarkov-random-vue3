@@ -1,12 +1,12 @@
 <template lang="">
-    <div v-if="isLoading">...loading</div>
+    <div v-if="isLoading.value">...loading</div>
     <div v-else>
         <div class="main">
             <div class="weapon">
                 <WeaponBox :weaponName = "weaponName.value" :imgLink= "imgLink.value"/>
             </div>
             <div class="itemListBox">
-                <ItemList :modList= "modSlots.value"/>
+                <ItemList :modList= "modSlots"/>
             </div>
         </div>
         <GenBtn @click= "generateRandomData"/>
