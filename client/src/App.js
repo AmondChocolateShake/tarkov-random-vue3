@@ -1,9 +1,13 @@
 import MainContainer from "./components/MainContainer";
+import styled, { ThemeProvider } from "styled-components";
+import theme from "./components/styles/theme";
 
 function App() {
   return (
     <div className="App">
-      <MainContainer/>
+      <ThemeProvider theme={theme}>
+        <MainContainer />
+      </ThemeProvider>
     </div>
   );
 }

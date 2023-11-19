@@ -1,22 +1,23 @@
 import React from "react";
 import TarkovLogo from "./logo/TarkovLogo";
 import WeaponBox from "./InnerContainer";
+import styled from "styled-components";
 
 export default function MainContainer() {
-  const container = {
-    width: "100vw",
-    height: "100vh",
-    color: "white",
-    background: "black",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  };
+  const StyledDiv = styled.div`
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  `;
   return (
-    <div style={container}>
-      <TarkovLogo/>
-      <WeaponBox/>
-    </div>
+    <StyledDiv>
+      <TarkovLogo />
+      <WeaponBox />
+    </StyledDiv>
   );
 }
