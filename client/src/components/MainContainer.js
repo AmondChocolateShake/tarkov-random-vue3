@@ -1,5 +1,5 @@
 import React from "react";
-import TarkovLogo from "./TarkovLogo";
+import TarkovLogo from "./logo/TarkovLogo";
 import WeaponBox from "./weapon/WeaponBox";
 
 export default function MainContainer() {
