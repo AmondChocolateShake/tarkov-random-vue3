@@ -1,5 +1,6 @@
 import React from "react";
 import { UserContext } from "../InnerContainer";
+import '../../font/fonts.css'
 
 export default function WeaponImg() {
 
