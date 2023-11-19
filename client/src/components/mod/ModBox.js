@@ -6,7 +6,7 @@ export default function ModBox() {
     display : "flex",
     justifyContent : "center",
     width: "100%",
-    height: "80%",
+    height: "60%",
     backgroundColor: "rgba(0, 0, 0, 1)",
   };
   return (
