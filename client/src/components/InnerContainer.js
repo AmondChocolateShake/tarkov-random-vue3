@@ -1,31 +1,27 @@
 import React, { useEffect, useState } from "react";
 import ModBox from "./mod/ModBox";
 import WeaponBox from "./weapon/WeaponBox";
-import data from "../dummy.json";
+// import data from "../dummy.json";
 export const UserContext = React.createContext();
 
 export default function InnerContainer() {
-  // const [data, setData] = useState({});
-  // const [loading, setLoading] = useState(true);
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch("http://localhost/5000/data", {
-  //         method: "GET",
-  //         headers: {
-  //           "Context-Type": "application/json; charset=utf-8",
-  //         },
-  //       });
-  //       const result = await response.json();
-  //       setData(result);
-  //     } catch (error) {
-  //       console.error("Error fetching Data :", error);
-  //     }
-  //   };
-  //   fetchData();
-  //   setLoading(false);
-  // }, [data]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const URL = "http://localhost:5000";
+        const response = await fetch(URL + "/generate");
+        const result = await response.json();
+        setData(result);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching Data! :", error);
+      }
+    };
+    fetchData();
+  }, [data]);
 
   const InnerContainer = {
     width: "80vw",
@@ -41,10 +37,14 @@ export default function InnerContainer() {
   };
   return (
     <div style={InnerContainer}>
-      <UserContext.Provider value={data}>
-        <WeaponBox />
-        <ModBox />
-      </UserContext.Provider>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <UserContext.Provider value={data}>
+          <WeaponBox />
+          <ModBox />
+        </UserContext.Provider>
+      )}
     </div>
   );
 }

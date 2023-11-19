@@ -9,13 +9,13 @@ export default function ModList() {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    height: "100%",
     width: "100%",
+    height: "100%",
     flexWrap: "wrap",
     overflow: "scroll",
   };
   const list = {
-    width: "40%",
+    width: "45%",
     height: "20%",
     backgroundColor: "rgba(30, 30, 30, 1)",
     margin: 20,
@@ -26,13 +26,14 @@ export default function ModList() {
     border: "1px solid white",
   };
   const modImg = {
-    width: "100%",
+    width: "50%",
     height: "100%",
     borderRight: "1px solid white",
-    display: "flex",
     objectFit: "contain",
+    overflow : "true"
   };
   const text = {
+    width : "50%",
     display: "flex",
     alignItems: "center",
     color: "white",
