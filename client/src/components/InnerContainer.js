@@ -4,8 +4,6 @@ import WeaponBox from "./weapon/WeaponBox";
 
 export default function InnerContainer() {
   const InnerContainer = {
-    minWidth : "900px",
-    minHeight : "600px",
     width: "80vw",
     height: "80vh",
     backgroundColor: "#1E1E1E",
