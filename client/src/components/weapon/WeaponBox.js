@@ -1,6 +1,6 @@
 import React from "react";
-import WeaponList from "./weapon/WeaponList";
-import ModList from "./weapon/ModList";
+import WeaponList from "./WeaponList";
+import ModBox from "../mod/ModBox";
 
 export default function WeaponBox() {
   const WeaponBox = {
@@ -18,7 +18,7 @@ export default function WeaponBox() {
   return (
     <div style={WeaponBox}>
       <WeaponList />
-      <ModList/>
+      <ModBox/>
     </div>
   );
 }
