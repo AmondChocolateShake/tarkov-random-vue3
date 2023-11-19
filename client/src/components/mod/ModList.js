@@ -1,6 +1,5 @@
 import React from "react";
 import { UserContext } from "../InnerContainer";
-// import '../../font.css'
 
 export default function ModList() {
 
