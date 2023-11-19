@@ -11,6 +11,8 @@ export default function GenBtn() {
     borderRadius: 5,
     border: "3px solid white",
 
+    textAlign: "center",
+    wordBreak: "break-all",
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
@@ -27,6 +29,8 @@ export default function GenBtn() {
     borderRadius: 5,
     border: "3px solid white",
 
+    textAlign: "center",
+    wordBreak: "break-all",
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
