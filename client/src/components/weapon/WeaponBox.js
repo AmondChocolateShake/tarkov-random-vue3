@@ -4,7 +4,7 @@ import WeaponImg from "./WeaponImg";
 export default function WeaponBox() {
   const align = {
     width : "100%",
-    height : "20%",
+    height : "40%",
     display : "flex",
     flexDirection :"row",
     justifyContent: "space-evenly",
