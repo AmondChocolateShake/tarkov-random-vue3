@@ -12,7 +12,7 @@ export default function GenBtn() {
     alignItems: "center",
     color: "black",
     fontWeight : "bold",
-    fontSize : "10"
+    fontSize : 25
   };
   const test = () => {
     console.log("test");
