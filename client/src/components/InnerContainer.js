@@ -1,9 +1,9 @@
 import React from "react";
-import ModBox from "../mod/ModBox";
-import WeaponImg from "./WeaponImg";
+import ModBox from "./mod/ModBox";
+import WeaponImg from "./weapon/WeaponImg";
 
-export default function WeaponBox() {
-  const WeaponBox = {
+export default function InnerContainer() {
+  const InnerContainer = {
     width: "60vw",
     height: "80vh",
     backgroundColor: "#1E1E1E",
@@ -16,7 +16,7 @@ export default function WeaponBox() {
     alignItems: "center",
   };
   return (
-    <div style={WeaponBox}>
+    <div style={InnerContainer}>
       <WeaponImg />
       <ModBox/>
     </div>
