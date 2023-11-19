@@ -38,16 +38,16 @@ export default function GenBtn() {
   const clicked = () => {
     console.log("clicked");
   };
-  const handleMouseDown = () => {
+  const handleMouseOver = () => {
     setHovering(true);
   };
-  const handleMouseOver = () => {
+  const handleMouseDown = () => {
     setHovering(false);
 
   };
   return (
     <div
-      style={isHovering ? btn : hoverdBtn}
+      style={isHovering ? hoverdBtn : btn}
       onClick={clicked}
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseDown}
