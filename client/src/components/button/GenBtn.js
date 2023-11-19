@@ -1,5 +1,6 @@
 export default function GenBtn() {
   const btn = {
+    height : "80%",
     color: "black",
     backgroundColor: "white",
     textAlign: "center",
