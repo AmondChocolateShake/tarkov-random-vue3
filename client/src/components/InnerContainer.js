@@ -12,11 +12,10 @@ export default function InnerContainer() {
   //   const fetchData = async () => {
   //     try {
   //       const response = await fetch("http://localhost/5000/data", {
-  //         method: "POST",
+  //         method: "GET",
   //         headers: {
   //           "Context-Type": "application/json; charset=utf-8",
   //         },
-  //         body: JSON.stringify(data),
   //       });
   //       const result = await response.json();
   //       setData(result);
