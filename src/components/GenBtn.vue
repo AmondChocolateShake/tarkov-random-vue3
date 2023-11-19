@@ -21,7 +21,7 @@ export default {
         width: 100px;
         height: 70px;
         
-
+        cursor: pointer;
         font-size: 20px;
         color: white;
         background-color: #6a6a6a;

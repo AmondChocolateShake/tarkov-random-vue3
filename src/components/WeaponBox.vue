@@ -1,7 +1,7 @@
-<template lang="">
+<template>
     <div id="weaponBox">
         <div class="imgBox">
-            <img class="inspectImg" src={{imgLink}} alt="Picture of Gun">
+            <img class="inspectImg" src="https://assets.tarkov.dev/5841474424597759ba49be91-image.webp" alt="Picture of Gun">
         </div>
         <div class="weapon_name">
             <div>
@@ -11,11 +11,24 @@
     </div>
 </template>
 <script>
+import { onBeforeMount } from 'vue';
 export default {
     name:'WeaponBox',
     props:{
         weaponName:String,
         imgLink:String
+    },
+    setup(){
+
+        
+
+        onBeforeMount(()=>{
+            
+
+        });
+        return{
+        }
+
     }
 }
 </script>

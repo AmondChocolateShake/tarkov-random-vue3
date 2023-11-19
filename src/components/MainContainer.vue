@@ -1,47 +1,45 @@
-<template lang="">
+<template>
     <div v-if="isLoading.value">...loading</div>
     <div v-else>
         <div class="main">
             <div class="weapon">
-                <WeaponBox :weaponName = "weaponName.value" :imgLink= "imgLink.value"/>
+                <WeaponBox :weaponName = "weaponName" :imgLink= "imgLink"/>
             </div>
             <div class="itemListBox">
-                <ItemList :modList= "modSlots"/>
+                <!-- <ItemList :modList= "modSlots"/> -->
             </div>
         </div>
-        <GenBtn @click= "generateRandomData"/>
+        <div class="generateBtnBox">
+            <GenBtn/>
+        </div>
     </div>
 </template>
 
-<script setup>
-    import { onBeforeMount, ref } from 'vue';
+<script>
+    import { ref } from 'vue';
+    import WeaponBox from './WeaponBox.vue';
+    import GenBtn from './GenBtn.vue';
+    export default {
 
-    const weaponName=ref('');
-    const imgLink=ref('');
-    const modSlots=ref([]);
-    const isLoading=ref(true);
-
-    onBeforeMount(() => {
-        generateRandomData()
-    });
-
-    function generateRandomData(){fetch('http://localhost:3000/weapon/generate', {
-        method: "POST",
-        headers: {
-            "Content-Type" : "application/json"
+        components:{
+            WeaponBox,
+            GenBtn,
         },
-        body:JSON.stringify({})
-        })
-        .then( res => res.json() )
-        .then(data =>{
-            weaponName.value=data.name;
-            imgLink.value=data.imgLink;
-            modSlots.value=data.modSlots;
-            isLoading.value=false;
-            console.log(data);
-            console.log(isLoading);
-        });
+
+        setup(){
+            const weaponName=ref('hel');
+            const imgLink=ref('https://assets.tarkov.dev/5841474424597759ba49be91-image.webp');
+            // const modSlots=ref([]);
+            const isLoading=ref(true);
+            
+            return {
+                weaponName,
+                imgLink,
+                isLoading
+            };
+        }
     }
+    
 </script>
 
 <style>
@@ -54,8 +52,14 @@
         border:2px solid rgba(255, 255, 255, 80%);
     }
 
-    .generateBtn{
-        color: aliceblue;
+    .generateBtnBox{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+
+        width:100%,
+        
     }
 
     .weapon{
