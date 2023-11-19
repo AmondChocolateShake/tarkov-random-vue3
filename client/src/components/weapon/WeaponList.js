@@ -1,11 +1,11 @@
-export default function WeaponList() {
+export default function WeaponImg() {
   
-  const list= {
+  const img= {
     width : "70%",
     height : "50%",
     backgroundColor : "rgba(158, 158, 158, 1)",
   }
   return (
-    <div style={list}>WeaponList</div>
+    <div style={img}>WeaponImg</div>
   )
 }
