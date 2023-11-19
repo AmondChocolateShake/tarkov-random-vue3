@@ -1,6 +1,7 @@
 import React from "react";
 import ModBox from "./mod/ModBox";
 import WeaponImg from "./weapon/WeaponImg";
+import WeaponBox from "./weapon/WeaponBox";
 
 export default function InnerContainer() {
   const InnerContainer = {
@@ -17,7 +18,7 @@ export default function InnerContainer() {
   };
   return (
     <div style={InnerContainer}>
-      <WeaponImg />
+      <WeaponBox/>      
       <ModBox/>
     </div>
   );
