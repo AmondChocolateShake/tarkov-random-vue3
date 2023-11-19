@@ -9,7 +9,7 @@ export default function MainContainer() {
     color: "white",
     background: "black",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   };
