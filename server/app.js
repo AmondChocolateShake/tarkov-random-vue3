@@ -11,7 +11,6 @@ app.get("/", (req, res) => {
 });
 
 app.get("/generate", (req, res) => {
-  console.log(req)
   console.log("Received Data:", data);
   res.json(data);
 });
