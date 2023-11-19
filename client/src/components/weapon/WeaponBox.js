@@ -5,8 +5,8 @@ export default function WeaponBox() {
   const align = {
     display : "flex",
     flexDirection :"row",
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "space-evenly",
+    alignContent: "center",
   }
   return (
     <div style={align}>
