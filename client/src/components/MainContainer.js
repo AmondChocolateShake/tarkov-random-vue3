@@ -1,6 +1,6 @@
 import React from "react";
 import TarkovLogo from "./logo/TarkovLogo";
-import WeaponBox from "./InnerContainer";
+import InnerContainer from "./InnerContainer";
 import styled from "styled-components";
 
 export default function MainContainer() {
@@ -17,7 +17,7 @@ export default function MainContainer() {
   return (
     <StyledDiv>
       <TarkovLogo />
-      <WeaponBox />
+      <InnerContainer />
     </StyledDiv>
   );
 }
