@@ -7,3 +7,8 @@
   font-family: 'bendereglarbold';
   src: url('./bender.bold.otf') format('truetype');
 }
+
+@font-face {
+  font-family: 'bendereglarblack';
+  src: url('./bender.black.otf') format('truetype');
+}
