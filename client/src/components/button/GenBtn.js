@@ -6,10 +6,10 @@ export default function GenBtn() {
   const btn = {
     width: "20%",
     height: "50%",
-    backgroundColor: "white",
+    backgroundColor: "rgba(217, 217, 217, 1)",
     cursor: "pointer",
     borderRadius: 5,
-    border: "2px solid white",
+    border: "3px solid white",
 
     display: "flex",
     justifyContent: "space-evenly",
@@ -25,7 +25,7 @@ export default function GenBtn() {
     backgroundColor: "black",
     cursor: "pointer",
     borderRadius: 5,
-    border: "2px solid white",
+    border: "3px solid white",
 
     display: "flex",
     justifyContent: "space-evenly",
