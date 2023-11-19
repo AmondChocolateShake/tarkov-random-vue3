@@ -20,7 +20,10 @@ export default function InnerContainer() {
         console.error("Error fetching Data! :", error);
       }
     };
+     // 데이터를 이미 가져왔을 경우에만 다시 요청하도록 변경
+  if (loading) {
     fetchData();
+  }
   }, [data]);
 
   const InnerContainer = {
