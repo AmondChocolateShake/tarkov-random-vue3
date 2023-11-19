@@ -1,0 +1,117 @@
+{
+  "id": "628b9c37a733087d0d7fe84b",
+  "name": "SAG AK-545 Short 5.45x39 carbine",
+  "imgLink": "https://assets.tarkov.dev/628b9c37a733087d0d7fe84b-image.webp",
+  "modSlots": [
+      {
+          "id": "628b8d83717774443b15e248",
+          "name": "AK-545 SAG Mk. 2.1 gas tube",
+          "imgLink": "https://assets.tarkov.dev/628b8d83717774443b15e248-8x.webp"
+      },
+      {
+          "id": "59bffc1f86f77435b128b872",
+          "name": "SilencerCo Hybrid 46 Direct Thread Mount adapter",
+          "imgLink": "https://assets.tarkov.dev/59bffc1f86f77435b128b872-8x.webp"
+      },
+      {
+          "id": "63f4da90f31d4a33b87bd054",
+          "name": "AK Mission First Tactical ENGAGE AK47 pistol grip",
+          "imgLink": "https://assets.tarkov.dev/63f4da90f31d4a33b87bd054-8x.webp"
+      },
+      {
+          "id": "628b9a40717774443b15e9f2",
+          "name": "AK-545 SAG buffer tube",
+          "imgLink": "https://assets.tarkov.dev/628b9a40717774443b15e9f2-8x.webp"
+      },
+      {
+          "id": "5bed61680db834001d2c45ab",
+          "name": "AK-12 5.45x39 30-round magazine",
+          "imgLink": "https://assets.tarkov.dev/5bed61680db834001d2c45ab-8x.webp"
+      },
+      {
+          "id": "5648ac824bdc2ded0b8b457d",
+          "name": "AK Zenit RP-1 charging handle",
+          "imgLink": "https://assets.tarkov.dev/5648ac824bdc2ded0b8b457d-8x.webp"
+      },
+      {
+          "id": "628b916469015a4e1711ed8d",
+          "name": "AK-545 SAG Mk.3 handguard",
+          "imgLink": "https://assets.tarkov.dev/628b916469015a4e1711ed8d-8x.webp"
+      },
+      {
+          "id": "59bffbb386f77435b379b9c2",
+          "name": "SilencerCo Hybrid 46 multi-caliber sound suppressor",
+          "imgLink": "https://assets.tarkov.dev/59bffbb386f77435b379b9c2-8x.webp"
+      },
+      {
+          "id": "58d2946386f774496974c37e",
+          "name": "Magpul MOE Carbine stock (FDE)",
+          "imgLink": "https://assets.tarkov.dev/58d2946386f774496974c37e-8x.webp"
+      },
+      {
+          "id": "57cffb66245977632f391a99",
+          "name": "Magpul M-LOK AFG tactical foregrip (Black)",
+          "imgLink": "https://assets.tarkov.dev/57cffb66245977632f391a99-8x.webp"
+      },
+      {
+          "id": "6269220d70b6c02e665f2635",
+          "name": "Magpul M-LOK Cantilever Mount",
+          "imgLink": "https://assets.tarkov.dev/6269220d70b6c02e665f2635-8x.webp"
+      },
+      {
+          "id": "6269220d70b6c02e665f2635",
+          "name": "Magpul M-LOK Cantilever Mount",
+          "imgLink": "https://assets.tarkov.dev/6269220d70b6c02e665f2635-8x.webp"
+      },
+      {
+          "id": "544909bb4bdc2d6f028b4577",
+          "name": "AN/PEQ-15 tactical device",
+          "imgLink": "https://assets.tarkov.dev/544909bb4bdc2d6f028b4577-8x.webp"
+      },
+      {
+          "id": "5649a2464bdc2d91118b45a8",
+          "name": "NcSTAR MPR45 Backup mount",
+          "imgLink": "https://assets.tarkov.dev/5649a2464bdc2d91118b45a8-8x.webp"
+      },
+      {
+          "id": "628b9be6cff66b70c002b14c",
+          "name": "AK-545 SAG railed dust cover",
+          "imgLink": "https://assets.tarkov.dev/628b9be6cff66b70c002b14c-8x.webp"
+      },
+      {
+          "id": "58d2912286f7744e27117493",
+          "name": "Magpul MOE Carbine rubber buttpad",
+          "imgLink": "https://assets.tarkov.dev/58d2912286f7744e27117493-8x.webp"
+      },
+      {
+          "id": "560d657b4bdc2da74d8b4572",
+          "name": "Zenit Klesch-2P flashlight with laser",
+          "imgLink": "https://assets.tarkov.dev/560d657b4bdc2da74d8b4572-8x.webp"
+      },
+      {
+          "id": "626becf9582c3e319310b837",
+          "name": "Insight WMX200 tactical flashlight",
+          "imgLink": "https://assets.tarkov.dev/626becf9582c3e319310b837-8x.webp"
+      },
+      {
+          "id": "57ae0171245977343c27bfcf",
+          "name": "BelOMO PK-06 reflex sight",
+          "imgLink": "https://assets.tarkov.dev/57ae0171245977343c27bfcf-8x.webp"
+      },
+      {
+          "id": "628b9471078f94059a4b9bfb",
+          "name": "AK-545 SAG rear sight",
+          "imgLink": "https://assets.tarkov.dev/628b9471078f94059a4b9bfb-8x.webp"
+      },
+      {
+          "id": "5b3b99265acfc4704b4a1afb",
+          "name": "Nightforce Magmount 30mm ring scope mount",
+          "imgLink": "https://assets.tarkov.dev/5b3b99265acfc4704b4a1afb-8x.webp"
+      },
+      {
+          "id": "617151c1d92c473c770214ab",
+          "name": "Schmidt & Bender PM II 1-8x24 30mm riflescope",
+          "imgLink": "https://assets.tarkov.dev/617151c1d92c473c770214ab-8x.webp"
+      }
+  ]
+}
