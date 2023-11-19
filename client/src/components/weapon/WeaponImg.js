@@ -1,6 +1,10 @@
-import data from "../../dummy.json";
+import React from "react";
+import { UserContext } from "../InnerContainer";
 
 export default function WeaponImg() {
+
+  const data = React.useContext(UserContext);
+
   const imgBox = {
     width: "60%",
     height: "70%",

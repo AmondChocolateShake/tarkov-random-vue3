@@ -1,6 +1,9 @@
 import React from "react";
 import ModBox from "./mod/ModBox";
 import WeaponBox from "./weapon/WeaponBox";
+import data from '../dummy.json'
+
+export const UserContext = React.createContext();
 
 export default function InnerContainer() {
   const InnerContainer = {
@@ -17,8 +20,10 @@ export default function InnerContainer() {
   };
   return (
     <div style={InnerContainer}>
-      <WeaponBox/>      
-      <ModBox/>
+      <UserContext.Provider value={data}>
+        <WeaponBox />
+        <ModBox />
+      </UserContext.Provider>
     </div>
   );
 }

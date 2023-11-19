@@ -1,8 +1,11 @@
 import React from "react";
-import data from "../../dummy.json";
-import '../../font/fonts.css'
+import { UserContext } from "../InnerContainer";
+// import '../../font.css'
 
 export default function ModList() {
+
+  const data = React.useContext(UserContext);
+  
   const container = {
     display: "flex",
     flexDirection: "row",
