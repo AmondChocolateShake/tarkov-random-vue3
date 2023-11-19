@@ -1,5 +1,6 @@
 import React from "react";
 import TarkovLogo from "./TarkovLogo";
+import WeaponBox from "./WeaponBox";
 
 export default function MainContainer() {
   const container = {
@@ -15,6 +16,7 @@ export default function MainContainer() {
   return (
     <div style={container}>
       <TarkovLogo/>
+      <WeaponBox/>
     </div>
   );
 }
