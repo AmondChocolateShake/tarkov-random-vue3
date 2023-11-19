@@ -8,10 +8,11 @@ export default function ModList() {
     height: "100%",
     width : "100%",
     flexWrap : "wrap",
+    overflow : "scroll"
   }
   const list = {
-    width: "20%",
-    height: "10%",
+    width: "30%",
+    height: "20%",
     backgroundColor: "rgba(30, 30, 30, 1)",
     margin: 20,
     display : "flex",
