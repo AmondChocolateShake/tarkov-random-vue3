@@ -14,9 +14,9 @@ export default function GenBtn() {
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    color: "black",
+    color: "rgba(0,0,0, 0.8)",
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: 40,
   };
 
   const hoverdBtn = {
@@ -30,11 +30,13 @@ export default function GenBtn() {
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    color: "white",
+    color: "rgba(255,255,255, 0.7)",
     fontWeight: "bold",
-    fontSize: 30,
+    fontSize: 40,
   };
-
+  const gentext = {
+    fontFamily: "bendereglarbold",
+  };
   const clicked = () => {
     console.log("clicked");
   };
@@ -43,7 +45,6 @@ export default function GenBtn() {
   };
   const handleMouseDown = () => {
     setHovering(false);
-
   };
   return (
     <div
@@ -52,7 +53,7 @@ export default function GenBtn() {
       onMouseOver={handleMouseOver}
       onMouseLeave={handleMouseDown}
     >
-      Generate
+      <div style={gentext}>Generate</div>
     </div>
   );
 }
