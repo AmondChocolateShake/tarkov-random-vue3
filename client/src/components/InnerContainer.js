@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ModBox from "./mod/ModBox";
 import WeaponBox from "./weapon/WeaponBox";
-import data from '../dummy.json'
-
+import data from "../dummy.json";
 export const UserContext = React.createContext();
 
 export default function InnerContainer() {
+  // const [data, setData] = useState({});
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost/5000/data", {
+  //         method: "POST",
+  //         headers: {
+  //           "Context-Type": "application/json; charset=utf-8",
+  //         },
+  //         body: JSON.stringify(data),
+  //       });
+  //       const result = await response.json();
+  //       setData(result);
+  //     } catch (error) {
+  //       console.error("Error fetching Data :", error);
+  //     }
+  //   };
+  //   fetchData();
+  //   setLoading(false);
+  // }, [data]);
+
   const InnerContainer = {
     width: "80vw",
     height: "80vh",
