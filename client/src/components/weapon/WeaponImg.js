@@ -21,9 +21,10 @@ export default function WeaponImg() {
   };
   const name = {
     textAlign: "center",
-    color: "white",
+    color: "rgba(30, 30, 30, 0.8)",
     fontWeight: "bold",
     fontSize : 30,
+    fontFamily : "bendereglarbold"
   };
   return (
     <div style={imgBox}>

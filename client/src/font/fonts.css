@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'bendereglar';
+  src: url('./bender.regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'bendereglarbold';
+  src: url('./bender.bold.otf') format('truetype');
+}

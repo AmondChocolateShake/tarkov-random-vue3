@@ -1,40 +1,42 @@
 import React from "react";
 import data from "../../dummy.json";
+import '../../font/fonts.css'
 
 export default function ModList() {
   const container = {
-    display : "flex",
-    flexDirection : "row",
+    display: "flex",
+    flexDirection: "row",
     justifyContent: "center",
     height: "100%",
-    width : "100%",
-    flexWrap : "wrap",
-    overflow : "scroll",
-  }
+    width: "100%",
+    flexWrap: "wrap",
+    overflow: "scroll",
+  };
   const list = {
     width: "40%",
     height: "20%",
     backgroundColor: "rgba(30, 30, 30, 1)",
     margin: 20,
-    display : "flex",
-    flexDirection : "row",
+    display: "flex",
+    flexDirection: "row",
     justifyContent: "center",
-    borderRadius : 5,
-    border : "1px solid white",
+    borderRadius: 5,
+    border: "1px solid white",
   };
   const modImg = {
-    width : "100%",
-    height : "100%",
-    borderRight : "1px solid white",
+    width: "100%",
+    height: "100%",
+    borderRight: "1px solid white",
     display: "flex",
     objectFit: "contain",
   };
   const text = {
-    display : "flex",
-    alignItems : "center",
+    display: "flex",
+    alignItems: "center",
     color: "white",
-    textAlign : "center",
-    margin : 5
+    textAlign: "center",
+    margin: 5,
+    fontFamily: "bendereglar",
   };
   return (
     <div style={container}>
