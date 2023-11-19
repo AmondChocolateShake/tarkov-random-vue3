@@ -5,6 +5,7 @@ export default function ModList() {
   const container = {
     display : "flex",
     flexDirection : "row",
+    justifyContent: "center",
     height: "100%",
     width : "100%",
     flexWrap : "wrap",
