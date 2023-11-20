@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ModBox from "./mod/ModBox";
 import WeaponBox from "./weapon/WeaponBox";
+import LoadComponent from "./load/LoadComponent";
 // import data from "../dummy.json";
 export const UserContext = React.createContext();
 
@@ -20,10 +21,9 @@ export default function InnerContainer() {
         console.error("Error fetching Data! :", error);
       }
     };
-     // 데이터를 이미 가져왔을 경우에만 다시 요청하도록 변경
-  if (loading) {
-    fetchData();
-  }
+    if (loading) {
+      fetchData();
+    }
   }, [data]);
 
   const InnerContainer = {
@@ -38,10 +38,12 @@ export default function InnerContainer() {
     justifyContent: "space-evenly",
     alignItems: "center",
   };
+
+
   return (
     <div style={InnerContainer}>
       {loading ? (
-        <p>Loading...</p>
+        <LoadComponent/>
       ) : (
         <UserContext.Provider value={data}>
           <WeaponBox />
