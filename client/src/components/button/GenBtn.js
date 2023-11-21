@@ -45,7 +45,6 @@ export default function GenBtn({ callbackClicked }) {
     callbackClicked();
     setHovering(true);
     const intervalId = setInterval(() => {
-      console.log(intervalId);
       clearInterval(intervalId);
       setHovering(false)
     }, 3000);
