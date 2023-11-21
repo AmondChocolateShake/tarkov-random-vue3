@@ -41,13 +41,8 @@ export default function ModList() {
   return (
     <div style={container}>
       {data.modSlots.map((modSlot, index) => (
-        <div style={list}>
-          <img
-            key={modSlot.id}
-            style={modImg}
-            src={modSlot.imgLink}
-            alt={modSlot.name}
-          ></img>
+        <div style={list} key={index}>
+          <img style={modImg} src={modSlot.imgLink} alt={modSlot.name}></img>
           <div style={text}>{modSlot.name}</div>
         </div>
       ))}
