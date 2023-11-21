@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ModBox from "./mod/ModBox";
 import WeaponBox from "./weapon/WeaponBox";
 import LoadComponent from "./load/LoadComponent";
-import fetchData from "./fetchData.js";
+import fetchData from "./api/fetchData.js";
 
 export const UserContext = React.createContext();
 
