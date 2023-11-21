@@ -4,13 +4,11 @@ import { UserContext } from "../InnerContainer";
 
 const ImgBox = styled.div`
   width: 60%;
+  height : 50%;
   @media screen and (max-width: 600px) {
-    width : 80%;
-    height : 70%;
-    flex-direction : column;
-
+    width : 50%;
+    height : 50%;
   }
-  height: inherit;
   background-color: rgba(158, 158, 158, 1);
   border: 3px solid white;
   border-radius: 5px;
@@ -24,6 +22,10 @@ const ModImg = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 3px;
+  @media screen and (max-width: 600px) {
+  width: 50%;
+
+  }
 `;
 
 const ModName = styled.div`

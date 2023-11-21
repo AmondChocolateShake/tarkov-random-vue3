@@ -8,7 +8,7 @@ const WeaponBoxContainer = styled.div`
   display: flex;
   flex-direction: row;
   @media screen and (max-width: 600px) {
-    flex-direction: column;
+    flex-direction: row;
   }
   justify-content: space-evenly;
   align-items: center;

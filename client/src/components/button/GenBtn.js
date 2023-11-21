@@ -50,21 +50,10 @@ export default function GenBtn({ callbackClicked }) {
     }, 3000);
   };
 
-  // const handleMouse = (isHovering) => {
-  //   if(clicked){
-  //     setInterval(() => {
-  //       setHovering(false)
-  //     }, 3000);
-  //   }
-  //   setHovering(isHovering);
-  // };
-
   return (
     <div
       style={isHovering ? hoverdBtn : btn}
       onClick={clicked}
-      // onMouseOver={() => handleMouse(true)}
-      // onMouseLeave={() => handleMouse(false)}
     >
       <div style={gentext}>Generate</div>
     </div>
