@@ -15,7 +15,7 @@ export default function ModList() {
     overflow: "scroll",
   };
   const list = {
-    width: "45%",
+    width: "40%",
     height: "20%",
     backgroundColor: "rgba(30, 30, 30, 1)",
     margin: 20,
@@ -30,7 +30,6 @@ export default function ModList() {
     height: "100%",
     borderRight: "1px solid white",
     objectFit: "contain",
-    overflow : "true"
   };
   const text = {
     width : "50%",
