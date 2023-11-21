@@ -15,7 +15,6 @@ export default function ModList() {
   };
   const list = {
     width: "40%",
-    height: "20%",
     backgroundColor: "rgba(30, 30, 30, 1)",
     margin: 20,
     display: "flex",
@@ -27,6 +26,7 @@ export default function ModList() {
   const modImg = {
     width: "50%",
     height: "100%",
+    maxHeight : "100px",
     borderRight: "1px solid white",
     objectFit: "contain",
   };
