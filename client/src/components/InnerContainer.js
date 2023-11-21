@@ -44,9 +44,7 @@ export default function InnerContainer() {
   const InnerContainer = {
     width: "80vw",
     height: "80vh",
-    minWidth : "530px",
     maxWidth: "800px",
-    minHeight : "600px",
     backgroundColor: "#1E1E1E",
     border: "1px solid",
     borderRadius: "5px",
