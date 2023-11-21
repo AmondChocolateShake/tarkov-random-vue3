@@ -1,38 +1,48 @@
 import React from "react";
+import styled from "styled-components";
 import { UserContext } from "../InnerContainer";
 
-export default function WeaponImg() {
+const ImgBox = styled.div`
+  width: 60%;
+  @media screen and (max-width: 600px) {
+    width : 80%;
+    height : 70%;
+    flex-direction : column;
+
+  }
+  height: inherit;
+  background-color: rgba(158, 158, 158, 1);
+  border: 3px solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const ModImg = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+`;
+
+const ModName = styled.div`
+  text-align: center;
+  color: rgba(30, 30, 30, 0.8);
+  font-weight: bold;
+  font-size: 20px;
+  font-family: bendereglarbold;
+`;
+
+const WeaponImg = () => {
   const data = React.useContext(UserContext);
 
-  const imgBox = {
-    width: "60%",
-    height: "inherit",
-    backgroundColor: "rgba(158, 158, 158, 1)",
-    border: "3px solid white",
-    borderRadius: 5,
-
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  };
-
-  const img = {
-    width: "100%",
-    height: "100%",
-    borderRadius : "3px"
-  };
-  const name = {
-    textAlign: "center",
-    color: "rgba(30, 30, 30, 0.8)",
-    fontWeight: "bold",
-    fontSize: 20,
-    fontFamily: "bendereglarbold",
-  };
   return (
-    <div style={imgBox}>
-      <img style={img} src={data.imgLink} overflow alt="weaponImg" />
-      <div style={name}>{data.name}</div>
-    </div>
+    <ImgBox>
+      <ModImg src={data.imgLink} alt="weaponImg" />
+      <ModName>{data.name}</ModName>
+    </ImgBox>
   );
-}
+};
+
+export default WeaponImg;

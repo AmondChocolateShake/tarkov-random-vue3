@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height : 100%;
   flex-wrap: wrap;
   overflow: scroll;
 `;

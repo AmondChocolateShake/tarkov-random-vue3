@@ -1,22 +1,27 @@
+import styled from "styled-components";
 import GenBtn from "../button/GenBtn";
 import WeaponImg from "./WeaponImg";
 
-export default function WeaponBox({callbackClicked}) {
-  const align = {
-    width : "100%",
-    height : "40%",
-    display : "flex",
-    flexDirection :"row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
+const WeaponBoxContainer = styled.div`
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
   }
-  const handleSwitch = () =>{
-    callbackClicked()
-  }
+  justify-content: space-evenly;
+  align-items: center;
+`;
+export default function WeaponBox({ callbackClicked }) {
+  const handleSwitch = () => {
+    callbackClicked();
+  };
   return (
-    <div style={align}>
+    <WeaponBoxContainer>
       <WeaponImg />
-      <GenBtn callbackClicked={handleSwitch}/>
-    </div>
+      <GenBtn callbackClicked={handleSwitch} />
+    </WeaponBoxContainer>
   );
 }

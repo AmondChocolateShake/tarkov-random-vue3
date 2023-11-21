@@ -3,6 +3,7 @@ import ModBox from "./mod/ModBox";
 import WeaponBox from "./weapon/WeaponBox";
 import LoadComponent from "./load/LoadComponent";
 import fetchData from "./api/fetchData.js";
+import styled from "styled-components";
 
 export const UserContext = React.createContext();
 
@@ -41,10 +42,11 @@ export default function InnerContainer() {
     }
   }, [loading]);
 
-  const InnerContainer = {
+  const InnerContainerSty = {
     width: "80vw",
     height: "80vh",
     maxWidth: "800px",
+    maxHeigth : "80vh",
     backgroundColor: "#1E1E1E",
     border: "1px solid",
     borderRadius: "5px",
@@ -53,7 +55,7 @@ export default function InnerContainer() {
   };
 
   return (
-    <div style={InnerContainer}>
+    <div style={InnerContainerSty}>
       {loading ? (
         <LoadComponent />
       ) : (
