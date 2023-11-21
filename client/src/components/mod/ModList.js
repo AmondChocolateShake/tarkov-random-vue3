@@ -2,9 +2,8 @@ import React from "react";
 import { UserContext } from "../InnerContainer";
 
 export default function ModList() {
-
   const data = React.useContext(UserContext);
-  
+
   const container = {
     display: "flex",
     flexDirection: "row",
@@ -32,12 +31,11 @@ export default function ModList() {
     objectFit: "contain",
   };
   const text = {
-    width : "50%",
+    width: "50%",
     display: "flex",
     alignItems: "center",
     color: "white",
     textAlign: "center",
-    margin: 5,
     fontFamily: "bendereglar",
   };
   return (
