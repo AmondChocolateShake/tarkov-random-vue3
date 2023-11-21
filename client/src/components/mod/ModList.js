@@ -1,51 +1,59 @@
 import React from "react";
 import { UserContext } from "../InnerContainer";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  overflow: scroll;
+`;
+
+// List 스타일드 컴포넌트
+const List = styled.div`
+  width: 40%;
+  background-color: rgba(30, 30, 30, 1);
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid white;
+`;
+
+// ModImg 스타일드 컴포넌트
+const ModImg = styled.img`
+  width: 50%;
+  height: 100%;
+  max-height: 100px;
+  border-right: 1px solid white;
+  object-fit: contain;
+`;
+
+// Text 스타일드 컴포넌트
+const Text = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: bendereglar;
+`;
 
 export default function ModList() {
   const data = React.useContext(UserContext);
 
-  const container = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
-    flexWrap: "wrap",
-    overflow: "scroll",
-  };
-  const list = {
-    width: "40%",
-    backgroundColor: "rgba(30, 30, 30, 1)",
-    margin: 20,
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    borderRadius: 5,
-    border: "1px solid white",
-  };
-  const modImg = {
-    width: "50%",
-    height: "100%",
-    maxHeight : "100px",
-    borderRight: "1px solid white",
-    objectFit: "contain",
-  };
-  const text = {
-    width: "50%",
-    display: "flex",
-    alignItems: "center",
-    color: "white",
-    textAlign: "center",
-    fontFamily: "bendereglar",
-  };
   return (
-    <div style={container}>
+    <Container>
       {data.modSlots.map((modSlot, index) => (
-        <div style={list} key={index}>
-          <img style={modImg} src={modSlot.imgLink} alt={modSlot.name}></img>
-          <div style={text}>{modSlot.name}</div>
-        </div>
+        <List key={index}>
+          <ModImg src={modSlot.imgLink} alt={modSlot.name}></ModImg>
+          <Text>{modSlot.name}</Text>
+        </List>
       ))}
-    </div>
+    </Container>
   );
 }
