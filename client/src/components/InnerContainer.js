@@ -9,13 +9,18 @@ export const UserContext = React.createContext();
 export default function InnerContainer() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
 
   //fetch 재요청 함수
   const fetchReq = () => {
-    console.log("Fetching data...");
-    setTimeout(() => {
+    if (!isButtonDisabled) {
+      console.log("Fetching data...");
+      setButtonDisabled(true);
+      setTimeout(() => {
+        setButtonDisabled(false);
+      }, 3000);
       getFetchData();
-    }, 3000);
+    }
   };
 
   //get 요청
@@ -43,7 +48,6 @@ export default function InnerContainer() {
     backgroundColor: "#1E1E1E",
     border: "1px solid",
     borderRadius: "5px",
-
     display: "flex",
     flexDirection: "column",
   };
