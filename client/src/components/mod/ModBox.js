@@ -9,7 +9,7 @@ const ModBoxContainer = styled.div`
   width: 100%;
   height: 50%;
   background-color: rgba(0, 0, 0, 1);
-  borderradius: 5;
+  border-radius: 5px;
 `;
 export default function ModBox() {
   return (
