@@ -6,26 +6,24 @@ export default function WeaponImg() {
 
   const imgBox = {
     width: "60%",
-    height: "50%",
+    height: "inherit",
     backgroundColor: "rgba(158, 158, 158, 1)",
-    border: "2px solid white",
+    border: "3px solid white",
     borderRadius: 5,
 
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
   };
 
   const img = {
     width: "100%",
-    height: "80%",
-    // objectFit: "contain",
-    borderBottom: "2px solid white",
+    height: "100%",
+    borderRadius : "3px"
   };
   const name = {
     textAlign: "center",
-    height: "20%",
-    overflow: "auto",
     color: "rgba(30, 30, 30, 0.8)",
     fontWeight: "bold",
     fontSize: 20,
