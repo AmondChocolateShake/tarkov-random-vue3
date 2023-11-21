@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function GenBtn({ callbackClicked }) {
   const [isHovering, setHovering] = useState(false);
-  const [isClicked, setClicked] = useState(false);
+  // const [isClicked, setClicked] = useState(false);
 
   const btn = {
     width: "20%",
