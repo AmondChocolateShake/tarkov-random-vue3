@@ -19,7 +19,7 @@ export default function GenBtn({ callbackClicked }) {
     alignItems: "center",
     color: "rgba(0,0,0, 0.8)",
     fontWeight: "bold",
-    fontSize: 40,
+    fontSize: 30,
   };
 
   const hoverdBtn = {
@@ -36,7 +36,7 @@ export default function GenBtn({ callbackClicked }) {
     alignItems: "center",
     color: "rgba(255,255,255, 0.7)",
     fontWeight: "bold",
-    fontSize: 40,
+    fontSize: 30,
   };
   const gentext = {
     fontFamily: "bendereglarbold",
