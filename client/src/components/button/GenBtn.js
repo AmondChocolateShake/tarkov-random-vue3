@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-export default function GenBtn({callbackClicked}) {
+export default function GenBtn({ callbackClicked }) {
   const [isHovering, setHovering] = useState(false);
+  const [isClicked, setClicked] = useState(false);
 
   const btn = {
     width: "20%",
@@ -25,7 +26,6 @@ export default function GenBtn({callbackClicked}) {
     width: "20%",
     height: "50%",
     backgroundColor: "black",
-    cursor: "pointer",
     borderRadius: 5,
     border: "3px solid white",
 
@@ -43,19 +43,29 @@ export default function GenBtn({callbackClicked}) {
   };
   const clicked = () => {
     callbackClicked();
-  };
-  const handleMouseOver = () => {
     setHovering(true);
+    const intervalId = setInterval(() => {
+      console.log(intervalId);
+      clearInterval(intervalId);
+      setHovering(false)
+    }, 3000);
   };
-  const handleMouseDown = () => {
-    setHovering(false);
-  };
+
+  // const handleMouse = (isHovering) => {
+  //   if(clicked){
+  //     setInterval(() => {
+  //       setHovering(false)
+  //     }, 3000);
+  //   }
+  //   setHovering(isHovering);
+  // };
+
   return (
     <div
       style={isHovering ? hoverdBtn : btn}
       onClick={clicked}
-      onMouseOver={handleMouseOver}
-      onMouseLeave={handleMouseDown}
+      // onMouseOver={() => handleMouse(true)}
+      // onMouseLeave={() => handleMouse(false)}
     >
       <div style={gentext}>Generate</div>
     </div>
