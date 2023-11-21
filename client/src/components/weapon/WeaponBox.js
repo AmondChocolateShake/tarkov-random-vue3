@@ -1,7 +1,7 @@
 import GenBtn from "../button/GenBtn";
 import WeaponImg from "./WeaponImg";
 
-export default function WeaponBox(callbackClicked) {
+export default function WeaponBox({callbackClicked}) {
   const align = {
     width : "100%",
     height : "40%",

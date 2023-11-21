@@ -12,6 +12,7 @@ export default function InnerContainer() {
 
   //fetch 재요청 함수
   const fetchReq = () => {
+    console.log("Fetching data...");
     getFetchData();
   };
 
@@ -26,7 +27,8 @@ export default function InnerContainer() {
     }
   };
 
-  useEffect(() => {
+  //첫접속 시 무조건 요청 한번
+    useEffect(() => {
     if (loading) {
       getFetchData();
     }

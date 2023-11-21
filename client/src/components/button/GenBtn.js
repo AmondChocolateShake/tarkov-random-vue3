@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function GenBtn(callbackClicked) {
+export default function GenBtn({callbackClicked}) {
   const [isHovering, setHovering] = useState(false);
 
   const btn = {
