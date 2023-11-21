@@ -2,29 +2,24 @@ import React, { useEffect, useState } from "react";
 import ModBox from "./mod/ModBox";
 import WeaponBox from "./weapon/WeaponBox";
 import LoadComponent from "./load/LoadComponent";
-// import data from "../dummy.json";
+import fetchData from './fetchData.js'
+
 export const UserContext = React.createContext();
 
 export default function InnerContainer() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
+  //fetch 재요청 함수
+  const fetchReq = () =>{
+    fetchData();
+  }
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const URL = "http://localhost:5000";
-        const response = await fetch(URL + "/generate");
-        const result = await response.json();
-        setData(result);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching Data! :", error);
-      }
-    };
     if (loading) {
-      fetchData();
+      setData(fetchData());
     }
-  }, [data]);
+  }, []);
 
   const InnerContainer = {
     width: "80vw",
@@ -38,6 +33,7 @@ export default function InnerContainer() {
     flexDirection: "column",
   };
 
+  
 
   return (
     <div style={InnerContainer}>
@@ -45,7 +41,7 @@ export default function InnerContainer() {
         <LoadComponent/>
       ) : (
         <UserContext.Provider value={data}>
-          <WeaponBox />
+          <WeaponBox callbackClicked={fetchReq} />
           <ModBox />
         </UserContext.Provider>
       )}

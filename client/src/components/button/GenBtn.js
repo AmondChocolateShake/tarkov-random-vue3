@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function GenBtn() {
+export default function GenBtn(callbackClicked) {
   const [isHovering, setHovering] = useState(false);
 
   const btn = {
@@ -42,7 +42,7 @@ export default function GenBtn() {
     fontFamily: "bendereglarbold",
   };
   const clicked = () => {
-    console.log("clicked");
+    callbackClicked();
   };
   const handleMouseOver = () => {
     setHovering(true);
