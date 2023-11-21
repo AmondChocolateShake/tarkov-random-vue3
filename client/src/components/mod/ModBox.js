@@ -7,7 +7,7 @@ const ModBoxContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 50%;
+  height: 70%;
   background-color: rgba(0, 0, 0, 1);
   border-radius: 5px;
 `;
