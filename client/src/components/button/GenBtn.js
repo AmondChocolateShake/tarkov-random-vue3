@@ -20,6 +20,9 @@ export default function GenBtn({ callbackClicked }) {
     color: "rgba(0,0,0, 0.8)",
     fontWeight: "bold",
     fontSize: 30,
+        '@media (max-width:600px)': {
+      fontSize: 10,
+    },
   };
 
   const hoverdBtn = {
@@ -37,6 +40,9 @@ export default function GenBtn({ callbackClicked }) {
     color: "rgba(255,255,255, 0.7)",
     fontWeight: "bold",
     fontSize: 30,
+    '@media (max-width:600px)': {
+      fontSize: 10,
+    },
   };
   const gentext = {
     fontFamily: "bendereglarbold",
@@ -46,15 +52,12 @@ export default function GenBtn({ callbackClicked }) {
     setHovering(true);
     const intervalId = setInterval(() => {
       clearInterval(intervalId);
-      setHovering(false)
+      setHovering(false);
     }, 3000);
   };
 
   return (
-    <div
-      style={isHovering ? hoverdBtn : btn}
-      onClick={clicked}
-    >
+    <div style={isHovering ? hoverdBtn : btn} onClick={clicked}>
       <div style={gentext}>Generate</div>
     </div>
   );

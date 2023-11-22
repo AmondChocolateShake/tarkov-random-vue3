@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { UserContext } from "../InnerContainer";
 
 const ImgBox = styled.div`
-  width: 60%;
+  width: 50%;
   height : 50%;
   @media screen and (max-width: 600px) {
     width : 50%;
@@ -23,7 +23,7 @@ const ModImg = styled.img`
   height: 100%;
   border-radius: 3px;
   @media screen and (max-width: 600px) {
-  width: 50%;
+  width: 60%;
 
   }
 `;
@@ -33,6 +33,9 @@ const ModName = styled.div`
   color: rgba(30, 30, 30, 0.8);
   font-weight: bold;
   font-size: 20px;
+  @media screen and (max-width : 600px){
+    font-size : 100%;
+  }
   font-family: bendereglarbold;
 `;
 

@@ -46,12 +46,15 @@ export default function InnerContainer() {
     width: "80vw",
     height: "80vh",
     maxWidth: "800px",
-    maxHeigth : "80vh",
+    maxHeigth: "80vh",
     backgroundColor: "#1E1E1E",
     border: "1px solid",
     borderRadius: "5px",
     display: "flex",
     flexDirection: "column",
+    "@media (max-width:600px)": {
+      
+    },
   };
 
   return (
