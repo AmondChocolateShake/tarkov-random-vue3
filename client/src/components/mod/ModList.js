@@ -7,17 +7,14 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height : 100%;
+  height: 100%;
   flex-wrap: wrap;
   overflow: scroll;
 `;
 
 // List 스타일드 컴포넌트
 const List = styled.div`
-  width: 40%;
-  @media screen and (max-width : 600px){
-    width: 100%;
-  }
+  width: 100%;
   background-color: rgba(30, 30, 30, 1);
   margin: 20px;
   display: flex;
@@ -41,6 +38,7 @@ const Text = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: white;
   text-align: center;
   font-family: bendereglar;
