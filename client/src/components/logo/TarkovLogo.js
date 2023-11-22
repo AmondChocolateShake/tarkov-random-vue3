@@ -1,10 +1,12 @@
 import React from "react"
+import styled from "styled-components"
 
+const LogoImg = styled.img `
+margin : 20;
+`
 export default function TarkovLogo () {
-  const logo = {
-    margin : 20
-  }
+
   return (
-    <div style={logo}>TarkovLogo</div>
+    <LogoImg src='./logo.png' alt="logo"></LogoImg>
   )
 }
