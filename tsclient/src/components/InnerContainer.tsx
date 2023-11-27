@@ -4,16 +4,9 @@ import WeaponBox from "./weapon/WeaponBox";
 import LoadComponent from "./load/LoadComponent";
 import fetchData from "./api/fetchData.js";
 import styled from "styled-components";
+import { IData } from "./interface/interface";
 
-interface IData {
-  id: string;
-  name: string;
-  imgLink: string;
-}
-
-export const UserContext = React.createContext<IData | undefined>(undefined);
-
-const InnerContainerSty: React.CSSProperties = styled.div`
+const InnerContainerSty = styled.div`
   width: "80vw";
   height: "80vh";
   maxwidth: "800px";
@@ -24,6 +17,8 @@ const InnerContainerSty: React.CSSProperties = styled.div`
   display: "flex";
   flexdirection: "column";
 `;
+
+export const UserContext = React.createContext<IData | undefined>(undefined);
 
 export default function InnerContainer() {
   const [data, setData] = useState<IData | {}>({});
