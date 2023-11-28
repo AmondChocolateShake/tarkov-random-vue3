@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { UserContext } from "../InnerContainer";
+import { IData } from "../interface/interface";
+import data from '../../dummy.json'
 
 const ImgBox = styled.div`
   width: 50%;
-  height : 50%;
+  height: 50%;
   @media screen and (max-width: 600px) {
-    width : 50%;
-    height : 50%;
+    width: 50%;
+    height: 50%;
   }
   background-color: rgba(158, 158, 158, 1);
   border: 3px solid white;
@@ -23,8 +25,7 @@ const ModImg = styled.img`
   height: 100%;
   border-radius: 3px;
   @media screen and (max-width: 600px) {
-  width: 60%;
-
+    width: 60%;
   }
 `;
 
@@ -33,16 +34,18 @@ const ModName = styled.div`
   color: rgba(30, 30, 30, 0.8);
   font-weight: bold;
   font-size: 20px;
-  @media screen and (max-width : 600px){
-    font-size : 100%;
+  @media screen and (max-width: 600px) {
+    font-size: 100%;
   }
   font-family: bendereglarbold;
 `;
 
-
-
 const WeaponImg = () => {
-  const data:IData = React.useContext(UserContext);
+  const data: IData | undefined = React.useContext(UserContext);
+
+  if (!data) {
+    return <div>Loading...</div>; // 또는 에러 메시지를 표시하는 등의 처리
+  }
 
   return (
     <ImgBox>
