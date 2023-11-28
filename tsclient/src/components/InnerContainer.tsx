@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ModBox from "./mod/ModBox";
 import WeaponBox from "./weapon/WeaponBox";
 import LoadComponent from "./load/LoadComponent";
-import fetchData from "./api/fetchData.js";
+import fetchData from "./api/fetchData";
 import styled from "styled-components";
 import { IData } from "./interface/interface";
 
@@ -26,7 +26,7 @@ export default function InnerContainer() {
   const [isButtonDisabled, setButtonDisabled] = useState(false);
 
   //fetch 재요청 함수
-  const fetchReq = () => {
+  const fetchReq: () => void = () => {
     if (!isButtonDisabled) {
       console.log("Fetching data...");
       setButtonDisabled(true);
@@ -38,7 +38,7 @@ export default function InnerContainer() {
   };
 
   //get 요청
-  const getFetchData = async () => {
+  const getFetchData: () => Promise<void> = async () => {
     try {
       const fetchedData = await fetchData();
       setData(fetchedData);
