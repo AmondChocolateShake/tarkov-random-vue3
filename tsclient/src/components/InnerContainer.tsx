@@ -21,7 +21,7 @@ const InnerContainerSty = styled.div`
 export const UserContext = React.createContext<IData | undefined>(undefined);
 
 export default function InnerContainer() {
-  const [data, setData] = useState<IData | {}>({});
+  const [data, setData] = useState<IData | undefined>(undefined);
   const [loading, setLoading] = useState(true);
   const [isButtonDisabled, setButtonDisabled] = useState(false);
 
