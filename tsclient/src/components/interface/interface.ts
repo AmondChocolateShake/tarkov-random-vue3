@@ -1,5 +1,8 @@
-export interface IData {
+export interface WeaponData {
   id: string;
-  name: string;
-  imgLink: string;
+  modSlots: {
+    id: string;
+    name: string;
+    imgLink: string;
+  }[];
 }
