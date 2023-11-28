@@ -1,6 +1,7 @@
 import React from "react";
 import { UserContext } from "../InnerContainer";
 import styled from "styled-components";
+import { WeaponData } from "../interface/interface";
 
 const Container = styled.div`
   display: flex;
@@ -45,11 +46,15 @@ const Text = styled.div`
 `;
 
 export default function ModList() {
-  const data = React.useContext(UserContext);
+  const data: WeaponData | undefined = React.useContext(UserContext);
+
+  if (!data) {
+    return <div>Weapon IMG Loading...</div>;
+  }
 
   return (
     <Container>
-      {data.modSlots.map((modSlot, index) => (
+      {data.modSlots.map((modSlot: WeaponData["modSlots"][0], index: number) => (
         <List key={index}>
           <ModImg src={modSlot.imgLink} alt={modSlot.name}></ModImg>
           <Text>{modSlot.name}</Text>

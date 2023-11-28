@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { UserContext } from "../InnerContainer";
-import { IData } from "../interface/interface";
-import data from '../../dummy.json'
+import { WeaponData } from "../interface/interface";
 
 const ImgBox = styled.div`
   width: 50%;
@@ -41,16 +40,17 @@ const ModName = styled.div`
 `;
 
 const WeaponImg = () => {
-  const data: IData | undefined = React.useContext(UserContext);
+  const data: WeaponData | undefined = React.useContext(UserContext);
+
+  const modSlot = data?.modSlots;
 
   if (!data) {
     return <div>Weapon IMG Loading...</div>;
   }
-
   return (
     <ImgBox>
-      <ModImg src={data.imgLink} alt="weaponImg" />
-      <ModName>{data.name}</ModName>
+      <ModImg src={modSlot.imgLink} alt="weaponImg" />
+      <ModName>{modSlot.name}</ModName>
     </ImgBox>
   );
 };

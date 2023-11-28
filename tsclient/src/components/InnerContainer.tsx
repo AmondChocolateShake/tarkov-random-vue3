@@ -4,7 +4,7 @@ import WeaponBox from "./weapon/WeaponBox";
 import LoadComponent from "./load/LoadComponent";
 import fetchData from "./api/fetchData";
 import styled from "styled-components";
-import { IData } from "./interface/interface";
+import { WeaponData } from './interface/interface';
 
 const InnerContainerSty = styled.div`
   width: "80vw";
@@ -18,10 +18,10 @@ const InnerContainerSty = styled.div`
   flexdirection: "column";
 `;
 
-export const UserContext = React.createContext<IData | undefined>(undefined);
+export const UserContext = React.createContext<WeaponData | undefined>(undefined);
 
 export default function InnerContainer() {
-  const [data, setData] = useState<IData | undefined>(undefined);
+  const [data, setData] = useState<WeaponData | undefined>(undefined);
   const [loading, setLoading] = useState(true);
   const [isButtonDisabled, setButtonDisabled] = useState(false);
 

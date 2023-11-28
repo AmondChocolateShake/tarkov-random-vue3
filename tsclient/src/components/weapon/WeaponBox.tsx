@@ -2,6 +2,10 @@ import styled from "styled-components";
 import GenBtn from "../button/GenBtn";
 import WeaponImg from "./WeaponImg";
 
+interface WeaponBoxProps {
+  callbackClicked: () => void;
+}
+
 const WeaponBoxContainer = styled.div`
   width: 100%;
   height: 30%;
@@ -13,7 +17,7 @@ const WeaponBoxContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
 `;
-export default function WeaponBox({ callbackClicked }) {
+const WeaponBox: React.FC<WeaponBoxProps> = ({ callbackClicked }) => {
   const handleSwitch = () => {
     callbackClicked();
   };
@@ -23,4 +27,6 @@ export default function WeaponBox({ callbackClicked }) {
       <GenBtn callbackClicked={handleSwitch} />
     </WeaponBoxContainer>
   );
-}
+};
+
+export default WeaponBox;
