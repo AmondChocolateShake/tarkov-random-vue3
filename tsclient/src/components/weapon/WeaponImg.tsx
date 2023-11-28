@@ -44,7 +44,7 @@ const WeaponImg = () => {
   const data: IData | undefined = React.useContext(UserContext);
 
   if (!data) {
-    return <div>Loading...</div>; // 또는 에러 메시지를 표시하는 등의 처리
+    return <div>Weapon IMG Loading...</div>;
   }
 
   return (
